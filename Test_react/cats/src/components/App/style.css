@@ -1,0 +1,24 @@
+.cat {
+    max-width: 1280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 45px 80px 60px 80px;
+    margin: 0 auto;
+    color: black;
+
+  }
+  .cat-title {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 200;
+    color: aliceblue;
+    margin: 0;
+    text-align: center;
+    font-size: 36px;
+    padding-bottom: 24px;
+  }
+  .cat-wrp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
