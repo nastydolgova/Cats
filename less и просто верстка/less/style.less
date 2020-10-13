@@ -1,0 +1,338 @@
+@font: "Exo 2", sans-serif;
+@defaultColor: #0099cc;
+@defaultColorHover: #2ea8e6;
+@selectedColor: #d91667;
+@selectedColorHover: #e62e7a;
+@disabledColor: #b3b3b3;
+
+body {
+  background-image: url(../img/Shadow.png);
+}
+
+.cat {
+  max-width: 1280px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 45px 80px 60px 80px;
+  margin: 0 auto;
+  color:black;
+  &-title {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 200;
+    color: aliceblue;
+    margin: 0;
+    text-align: center;
+    font-size: 36px;
+    padding-bottom: 24px;
+  }
+  &-wrp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &-item {
+    width: 320px;
+    height: 480px;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0 5px 0 5px;
+    cursor: pointer;
+    &-content {
+      background-color: white;
+      padding: 15px 0 0 48px;
+      height: 435px;
+      border: 4px solid @defaultColor;
+      border-top: none;
+      margin: 0;
+      border-radius: 0 0 8px 8px;
+      box-sizing: border-box;
+      background-image: url(../img/Photo.png);
+      background-repeat: no-repeat;
+      background-position-x: -35px;
+      background-position-y: 160px;
+    }
+    &-circle {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      background-color: @defaultColor;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      font-weight: 400;
+      font-family: "Exo 2", sans-serif;
+      font-size: 42px;
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      line-height: 27px;
+      p {
+        margin: 0;
+        padding-top: 10px;
+      }
+      span {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  &-p {
+    font-size: 16px;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 200;
+    margin: 0;
+    background: #fff;
+    padding-top: 21px;
+    border-top: 4px solid @defaultColor;
+    border-radius: 0 8px 0 0;
+    border-right: 4px solid @defaultColor;
+    width: 275px;
+  }
+  &-angle {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(
+      -45deg,
+      #fff,
+      #fff 28.5px,
+      @defaultColor 0,
+      @defaultColor 33px,
+      transparent 0
+    );
+  }
+}
+
+.content {
+  &-h2 {
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+  }
+  &-h4 {
+    font-family: "Exo 2", sans-serif;
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  &-list {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Exo 2", sans-serif;
+    color: #666;
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+.cat-item-txt {
+  color: white;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: center;
+  a {
+    border-bottom: 1px dashed @defaultColor;
+    color: @defaultColor;
+    text-decoration: none;
+  }
+}
+
+.cat-item-txt-s,
+.cat-item-txt-d{
+  color: white;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: center;
+  display: none;
+}
+
+//defaultHover
+
+.cat-item:hover .cat-item-content {
+  border: 4px solid @defaultColorHover;
+  border-top: none;
+}
+
+.cat-item:hover .cat-item-circle {
+  background-color: @defaultColorHover;
+}
+
+.cat-item:hover .header-p {
+  border-top: 4px solid @defaultColorHover;
+  border-right: 4px solid @defaultColorHover;
+}
+
+.cat-item:hover .header-angle {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(
+    -45deg,
+    #fff,
+    #fff 28.5px,
+    @defaultColorHover 0,
+    @defaultColorHover 33px,
+    transparent 0
+  );
+}
+
+.cat-item:hover .cat-item-txt a {
+  border-bottom: 1px dashed @defaultColorHover;
+  color: @defaultColorHover;
+}
+
+
+//Selected
+
+.selected .cat-item-content {
+  border: 4px solid @selectedColor;
+  border-top: none;
+}
+
+.selected .cat-item-circle {
+  background-color: @selectedColor;
+} 
+
+.selected .header-p {
+  border-top: 4px solid @selectedColor;
+  border-right: 4px solid @selectedColor;
+}
+
+.selected .header-angle {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(
+    -45deg,
+    #fff,
+    #fff 28.5px,
+    @selectedColor 0,
+    @selectedColor 33px,
+    transparent 0
+  );
+}
+
+.selected .cat-item-txt {
+  display: none;
+}
+
+.selected .cat-item-txt-s {
+  display: block;
+}
+
+//SelectedHover
+
+.selected:hover .cat-item-content {
+  border: 4px solid @selectedColorHover;
+  border-top: none;
+}
+
+.selected:hover .cat-item-circle {
+  background-color: @selectedColorHover;
+} 
+
+.selected:hover .header-p {
+  border-top: 4px solid @selectedColorHover;
+  border-right: 4px solid @selectedColorHover;
+}
+
+.selected:hover .header-angle {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(
+    -45deg,
+    #fff,
+    #fff 28.5px,
+    @selectedColorHover 0,
+    @selectedColorHover 33px,
+    transparent 0
+  );
+}
+
+//Disabled
+
+.disabled{
+  cursor: default;
+}
+
+.disabled .header{
+  color: @disabledColor;
+}
+
+.disabled .cat-item-content{
+  color: @disabledColor;
+  background-image:url(../img/Photo_dis.png);
+}
+
+.disabled .cat-item-content {
+  border: 4px solid @disabledColor;
+  border-top: none;
+}
+
+.disabled .cat-item-circle {
+  background-color: @disabledColor;
+} 
+
+.disabled .header-p {
+  border-top: 4px solid @disabledColor;
+  border-right: 4px solid @disabledColor;
+}
+
+.disabled .header-angle {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(
+    -45deg,
+    #fff,
+    #fff 28.5px,
+    @disabledColor 0,
+    @disabledColor 33px,
+    transparent 0
+  );
+}
+
+.disabled .cat-item-txt {
+  display: none;
+}
+
+.disabled .cat-item-txt-d{
+  color: #e9e95c;
+  display: block;
+}
+
+//DisabledHover
+.disabled:hover .cat-item-content {
+  border: 4px solid @disabledColor;
+  border-top: none;
+}
+
+.disabled:hover .cat-item-circle {
+  background-color: @disabledColor;
+} 
+
+.disabled:hover .header-p {
+  border-top: 4px solid @disabledColor;
+  border-right: 4px solid @disabledColor;
+}
+
+.disabled:hover .header-angle {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(
+    -45deg,
+    #fff,
+    #fff 28.5px,
+    @disabledColor 0,
+    @disabledColor 33px,
+    transparent 0
+  );
+}
