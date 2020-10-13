@@ -9,7 +9,7 @@ function CatItem(props) {
         ClassForItem = 'disabled'
     }
     return (
-        <div className={ClassForItem} >
+        <div className={ClassForItem}>
         <header className="header">
             <div className="header-angle"></div>
             <p className="header-p">Сказочное заморское яство</p>
@@ -23,7 +23,7 @@ function CatItem(props) {
             </ul>
 
         </div>
-        <p className="cat-item-txt">Чего сидишь? Порадуй котэ, купи. </p>
+        <p className="cat-item-txt">Чего сидишь? Порадуй котэ, <a> купи.</a> </p>
         <p className="cat-item-txt-s">{props.selectedText} </p>
         <p className="cat-item-txt-d">Печалька, {props.inside} закончился. </p>
         <div className="cat-item-circle">
